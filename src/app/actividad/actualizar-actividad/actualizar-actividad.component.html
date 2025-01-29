@@ -1,0 +1,84 @@
+<form>
+
+    <div class="row mb-3">
+            <label for="Proyecto" id="proyectoid" name="proyectoid" class="col-sm-2 col-form-label">Proyecto</label>
+         <div class="col-sm-6">
+            <select class="form-select" aria-label="Default select example" *ngIf="actividad" [(ngModel)]="actividad.proyectoId">
+                <option selected>Seleccione el proyecto</option>
+                <option value="-1" *ngFor="let c of Cliente">{{c.nombre}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+            <label for="Proyecto" id="proyectoid" name="proyectoid" class="col-sm-2 col-form-label">NIT Cliente</label>
+        <div class="col-sm-6">
+            <select class="form-select" aria-label="Default select example" *ngIf="actividad" [(ngModel)]="actividad.nit">
+                <option selected>Seleccione el NIT del cliente</option>
+                <option value="-1" *ngFor="let c of Cliente">{{c.nombre}}</option>
+            </select>
+        </div>
+    </div>
+    
+    
+    <div class="row mb-3">
+            <label for="Proyecto" id="proyectoid" name="proyectoid" class="col-sm-2 col-form-label">Usuario</label>
+        <div class="col-sm-6">
+            <select class="form-select" aria-label="Default select example" *ngIf="actividad" [(ngModel)]="actividad.usuarioId">
+                <option selected>Seleccione el usuario</option>
+                <option value="-1" *ngFor="let u of Usuario">{{u.nombre}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+            <label for="Proyecto" id="proyectoid" name="proyectoid" class="col-sm-2 col-form-label">Actividad</label>
+        <div class="col-sm-6">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" *ngIf="actividad" [(ngModel)]="actividad.actividad"></textarea>
+        </div>
+    </div>
+
+
+    <div class="row mb-3">
+            <label for="EstadoActividad" id="EstadoActividad" name="EstadoActividad" class="col col-sm-2 col-form-label">Estado</label>
+        <div class="col-sm-6">
+            <div class="form-check">
+            <label class="form-check-label" for="gridRadios1" id="BotonActivo">Activo</label>      
+            <input class="form-check-input" type="radio" name="BotonActivo"  value="1" checked *ngIf="actividad" [(ngModel)]="actividad.estado">
+        </div>
+        <div class="form-check">
+            <label class="form-check-label"   for="gridRadios1" id="BotonInactivo"> Inactivo </label>
+            <input class="form-check-input" type="radio" name="BotonInactivo"  value="2" *ngIf="actividad" [(ngModel)]="actividad.estado">
+            
+        </div>
+        </div>
+    </div>
+
+    <div class="col-sm-10">
+        
+    </div>
+    
+    <div class="row mb-3">
+        <div class="col" id="Fechas">
+                <label  for="Fechainicia" id="Fechainicia">Fecha de inicio</label>
+            <div> 
+                <input type="datetime-local" name="Fechainicia" id="Fechainicia" *ngIf="actividad" [(ngModel)]="actividad.fechaInicio">
+            </div>
+        </div>
+        
+        <div class="col">
+                <label for="fechafinaliza" id="fechafinaliza">Fecha de finalización</label>
+            <div > 
+                <input type="datetime-local" name="fechafinaliza" id="fechafinaliza" *ngIf="actividad" [(ngModel)]="actividad.fechaFin">
+            </div>
+        </div>
+
+        <div class="col ">
+            <label for="fechareal" id="fechareal">Fecha real de cierre</label>
+        <div > 
+            <input type="datetime-local" name="fechareal" id="fechareal" *ngIf="actividad" [(ngModel)]="actividad.fechaRealCierre">
+        </div>
+        </div>
+    </div>
+
+</form>

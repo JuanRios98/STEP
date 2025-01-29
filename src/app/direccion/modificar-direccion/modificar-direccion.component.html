@@ -1,0 +1,22 @@
+    <form>
+        <div class="row mb-3">
+            <label for="ActualizarDirCliente" class="col-sm-2 col-form-label" id="parametro">Dirección</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ActualizarDirCliente" name="ActualizarDirCliente" *ngIf="direccion" [(ngModel)]="direccion.direccion">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="ActualizarCuiCliente" class="col-sm-2 col-form-label">Cuidad</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ActualizarCuiCliente" name="ActualizarCuiCliente" *ngIf="direccion" [(ngModel)]="direccion.ciudad">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label for="ActualizarPaisCliente" class="col-sm-2 col-form-label">Pais</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ActualizarPaisCliente" name="ActualizarPaisCliente"  *ngIf="direccion" [(ngModel)]="direccion.pais" >
+            </div>
+        </div>                
+        
+    </form>
+

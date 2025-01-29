@@ -1,0 +1,16 @@
+.col{
+    margin: 70px 0px;
+}
+
+#titulo{
+    margin-top: 50px;
+}
+
+#usuarios,#Clientes{width: 18rem;}
+
+
+.card-img-top {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover; 
+}

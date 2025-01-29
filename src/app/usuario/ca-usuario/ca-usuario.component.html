@@ -1,0 +1,36 @@
+<form>
+ 
+    <div class="mb-3 row">
+        <label for="NombreUsuario"  id="NombreUsuario" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="NombreUsuario" name="NombreUsuario" *ngIf="usuario" [(ngModel)]="usuario.nombre">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="ApellidoUsuario"  id="ApellidoUsuario" class="col-sm-2 col-form-label">Apellido</label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" id="ApellidoUsuario" name="ApellidoUsuario" *ngIf="usuario" [(ngModel)]="usuario.apellido">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="DocumentoUsuario" name="DocumentoUsuario" id="DocumentoUsuario" class="col-sm-2 col-form-label">Documento</label>
+        <div class="col-sm-6">
+          <input type="number" class="form-control" id="DocumentoUsuario" name="DocumentoUsuario" *ngIf="usuario" [(ngModel)]="usuario.documento">
+        </div>
+      </div>
+
+        <div class="mb-3 row">
+            <label for="EstadoUsuario"  id="EstadoUsuario" class="col-sm-2 col-form-label">Estado</label>
+            <div class="col-sm-6">
+                <select class="form-select" aria-label="Default select example" name="EstadoUsuario" *ngIf="usuario" [(ngModel)]="usuario.estado">
+                    <option selected>Seleccione el estado</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                </select>
+            </div>
+      </div>
+
+
+    
+
+</form>

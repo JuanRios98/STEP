@@ -1,0 +1,68 @@
+<form>
+    <div class="row mb-3">
+        <label for="proyectoid" id="proyectoid"  class="col-sm-2 col-form-label">Id</label>
+         <div class="col-sm-6">
+            <input type="number" class="form-control" name="proyectoid" 
+            *ngIf="proyecto" [(ngModel)]="proyecto.id">
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="NIT" id="NITcliente" class="col-sm-2 col-form-label">NIT Cliente</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="NITcliente" 
+            *ngIf="proyecto" [(ngModel)]="proyecto.nit">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="NombreProyecto" id="NombreProyecto"  class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="NombreProyecto" 
+            *ngIf="proyecto" [(ngModel)]="proyecto.nombre">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col" id="Fechas">
+                <label  for="Fechainicia" id="Fechainicia">Fecha de inicio</label>
+            <div> 
+                <input type="datetime-local" name="Fechainicia" id="Fechainicia" 
+                *ngIf="proyecto" [ngModel]="Formatofechalocalproyecto(proyecto.fechaInicio)"
+                (ngModelChange)="UpdateDate($event,'fechaInicio')">
+            </div>
+        </div>
+        
+        <div class="col">
+                <label for="fechafinaliza" id="fechafinaliza">Fecha de finalización</label>
+            <div > 
+                <input type="datetime-local" name="fechafinaliza" id="fechafinaliza" 
+                *ngIf="proyecto"  [ngModel]=" Formatofechalocalproyecto(proyecto.fechaFin)"
+                (ngModelChange)="UpdateDate($event,'fechaFin')" >
+            </div>
+        </div>
+
+        <div class="col ">
+            <label for="fechareal" id="fechareal">Fecha real de cierre</label>
+        <div > 
+            <input type="datetime-local" name="fechareal" id="fechareal" 
+            *ngIf="proyecto" [ngModel]=" Formatofechalocalproyecto(proyecto.fechaRealCierre)"
+            (ngModelChange)="UpdateDate($event, 'fechaRealCierre')" >
+        </div>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
+        <label for="EstadoUsuario"  id="EstadoUsuario" class="col-sm-2 col-form-label">Estado</label>
+        <div class="col-sm-6">
+            <select class="form-select" aria-label="Default select example" name="EstadoUsuario" 
+            *ngIf="proyecto" [(ngModel)]="proyecto.estado">
+                <option selected>Seleccione el estado</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+            </select>
+        </div>
+  </div>
+
+</form>
+

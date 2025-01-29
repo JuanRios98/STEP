@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: gainsboro;
+}
+
+#botonuevadir, #botonmodifdir,#botonelimdir, #BotonCancelar{
+    margin-bottom: 40px;
+    
+}
+
+#NitCliente{
+    margin-bottom: 20px;
+}
